@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/stylein.css' %}">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <div class="left">
+            <h1>please insert your data</h1>
+            <p>thsnk you for trusting us <br />
+            hope to enjot in this site</p>
+        </div>
+
+
+        <div class="right">
+            <h1>
+                sign in
+            </h1>
+
+            <div class="contact-content">
+                <form action="{% url 'users:login' %}" method="POST" >
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="email"><br/>
+                    <input type="password" name="password" placeholder="password"><br/>
+                    <button type="submit" >ok</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

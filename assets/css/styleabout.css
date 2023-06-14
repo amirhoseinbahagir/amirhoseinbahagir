@@ -1,0 +1,151 @@
+
+@import url(font-awesome.min.css);
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+
+
+*{
+    margin: 0;
+    
+}
+body{
+    font-family: "Raleway", Helvetica, sans-serif;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
+    font-family: Helvetica;
+}
+
+/*0000000header000000*/
+.header{
+    background-image: url(../img/dark_tint.png) , url(../img/surfers-riding-waves-atlantic-ocean-toward-shore-nazare-portugal.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+}
+.top-menu{
+    padding: 40px;
+}
+
+.header h1{
+    float: left;
+}
+
+.nav {
+    text-align: right;
+}
+
+/*0000000header000000*/
+
+
+.main {
+    background-color: skyblue;
+}
+.main h1{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.main p{
+    text-align: center;
+}
+
+/*0000000header000000*/
+
+.about{
+    text-align: center;
+    padding: 100px;
+}
+
+.about-header h2{
+    font-size: 42px;
+    color: #474747;
+    margin-bottom: 15px;
+}
+.about-header p{
+    font-size: 22px;
+    color: #858585;
+    margin-bottom: 100px;
+}
+
+.about-content{
+    border-top: 1px solid #858585;
+    border-bottom: 1px solid #858585;
+    margin:60px auto ;
+    padding: 60px 0;
+    width: 90%;
+    text-align: center;
+}
+
+.prof{
+    width: 24%;
+}
+img{
+    float: left;
+    border-radius: 100%;
+}
+
+.prof h2{
+    margin-top: 20px;
+}
+.about-content>*{
+    float: left;
+}
+.about-content:before,
+.about-content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

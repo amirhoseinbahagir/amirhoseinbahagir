@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+
+<body>
+    <div class="header">
+
+        <div class="top-menu">
+
+
+           <h1>
+            <a href="#">amirbaha</a><br>
+           </h1> 
+
+
+           <div class="nav">
+                    <ul>
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div style="height:40px; width:500px; color:white" class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{message|safe}}</div>
+                        {% endfor %}
+                        {% endif %}
+                         {% if request.user.is_authenticated %}
+                         <li><a href="#">Logged in as {{request.user.username}}</a></li>
+                          <li><a href="{% url 'users:logout' %}">logout</a></li>
+                         {% else %}
+                          <li><a href="{% url 'users:register' %}">register</a></li>
+                           <li><a href="{% url 'users:login' %}">login</a></li>
+                         {% endif %}
+                       
+                         <li><a href="{% url 'website:home' %}">home</a></li>
+                           <li><a href="{% url 'website:about' %}">about</a></li>
+                    </ul>
+            
+                 </div> 
+
+            <div class="banner-content">
+                <h2>Hi. This Is my web page</h2>
+                <p >In this page I decided to present for you some informations about IOT in medical
+                   that in this days  it's one of the trends in the world. <br />
+                   for acgiving to the whole informations push the button.<br/>
+                </p>
+                <button class="btn , btn-blue , btn-big" > IOT in medical</button>
+            </div>
+        </div>
+
+
+
+
+
+
+    <div class="main">
+
+
+
+        <div class="services"> 
+            
+        <div class="services-header">
+            <h2>IOMT</h2>
+            <p>Internet of Medical Things</p>
+        </div>
+        <div class="services-contains">
+
+
+            <div class="box">
+
+            <i class="fa-cloud icon color-blue big"></i>
+            <h4>cost control</h4>
+            <p>RPM and telehealth save some of the costs of having <br/>a patient visit a healthcare facility in person. <br/>Faster health data processing also saves providers' time and money.</p>
+        
+            </div>
+
+            <div class="box">
+
+                <i class="fa-desktop icon color-grean big"></i>
+                <h4>monitoring systems</h4>
+                <p>IoMT enables round-the-clock health monitoring of patients with chronic conditions
+                     It also gives doctors better information about the patient's living circumstances, which can influence care.</p>
+            
+            </div>
+
+            <div class="box">
+
+                    <i class="fa-rocket icon color-red big"></i>
+                    <h4>accessibility</h4>
+                    <p>IoMT gives patients more access to health services and education.<br/> Patients have more options for service and can access it when they need it through a telehealth application.<br/></p>
+                
+            </div>
+
+
+        </div>
+
+        </div>
+
+
+        <div class="about">
+            <div class="about-header">
+                <h2>Internet of Medical Things</h2>
+                <p>refers to medical devices and applications with Internet connectivity.<br/>
+                     It's a subset of Internet of Things (IoT) and, for this reason, is often referred to as IoT in healthcare.IoT technology in the healthcare industry and medical settings raises several issues:
+
+                     Implementation. Interoperability and device compliance with industry standards complicate implementation of IoMT infrastructure.
+                     Upfront costs. The initial implementation cost of IoMT technology can be high, and it might take time to get a positive return on investment.
+                     Security. Protected health information faces more security risks and security regulations, such as the Health Insurance Portability and Accountability Act. Transmitted medical data exposes providers to a range of cybersecurity threats, including data breaches and fraud. Attackers can use stolen credentials to obtain medical services or drugs. Providers face serious compliance penalties and fines in the event of a data breach.
+                     Data ownership. It's not always clear who IoMT data belongs to when it is generated. The patient, software provider and other healthcare providers might generate or touch the data during its lifecycle. Depending on the context, the data rights for each party can be complex.
+                     Data classification. As technology evolves and IoMT collects a larger variety of data, what constitutes medical data might become harder to define. For example, emergent medical data is health information inferred by artificial intelligence (AI) applications from non-health-related data. AI technology can look at traces left by consumers and other data and turn it into medical data. Monitoring a user's location is nonmedical information that can be used to track the spread of infectious disease.
+                     User experience. It can be a challenge to design medical devices and applications that are easy for patients to use. Poorly designed devices lead to limited or flawed data collection when patients remove the device or use it incorrectly.</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="contact">
+            <div class="contact-header">
+                <h2>comment for me</h2>
+                <p>if you have any informations about us<br/>
+                or you need to tell me something please leave your comment down</p>
+            </div>
+
+            <div class="contact-content">
+                <form action="{% url 'website:contact' %}" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="name">
+                    <input type="email" name="email" placeholder="email">
+                    <textarea name="message" placeholder="message"></textarea><br/>
+                    <button type="submit" class="btn, btn-gray , btn-big">send message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <ul>
+            <li>Ntiteled .all right reserved</li>
+            <li>designed:<a href="#">templaid</a></li>
+            <li>image:<a href="#">amir bahagir</a></li>
+        </ul>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styleabout.css' %}">
+</head>
+
+
+
+<body>
+
+    <div class="header">
+        <div class="top-menu">
+
+        
+
+        <h1>
+            <a href="{% url 'website:about' %}">about</a>
+        </h1>
+
+
+        <div class="nav">
+            <ul>
+                <li><a href="{% url 'website:home' %}">home</a></li>
+            </ul>
+        
+        </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="main">
+        <h1>
+            about this sit
+        </h1>
+
+        <p>
+            first of all I should say "Wellcom here" <br />
+            my name is amirhosein bahagir <br />
+            and i am so proud that your are here and looking this sit<br />
+             in this site i decided to present som informations about IOT in medical<br />
+             and there i gather som important info about it that you can look them by cliking on links <br />
+              in the end i am so happy that you are with us
+        </p>
+
+
+       
+
+
+        <div class="about">
+            <div class="about-header">
+                <p>overaly this site creaeted for kiau project </p>
+            </div>
+
+
+
+            <div class="about-content">
+                <div class="prof">
+                    <img src="{% static '/img/profile_placeholder.gif' %}" alt="">
+                    <h2>mr.mirhosein</h2>
+                    <p>master of project<br>
+                       karaj uni</p>
+                </div>
+                <div class="prof">
+                    <img src="{% static '/img/profile_placeholder.gif' %}" alt="">
+                    <h2>amir bahagir</h2>
+                    <p>student <br> karaj</p>
+                </div>
+            </div>
+
+
+</div>
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>

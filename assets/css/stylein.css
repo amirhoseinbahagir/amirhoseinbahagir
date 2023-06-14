@@ -1,0 +1,61 @@
+
+@import url(font-awesome.min.css);
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+    
+*{
+    margin: 0;
+}
+
+body{
+    font-family: "Raleway", Helvetica, sans-serif;
+    color: #444;
+}
+
+
+/*0000000header000000*/
+
+
+.left{
+    background-color: skyblue;
+    width: 45%;
+    height: 100%;
+    padding-bottom: 600px;
+    padding-left: 20px;
+    float: left;
+
+}
+.left p{
+    padding-top: 20px;
+    padding-left: 100px;
+}
+.left h1{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+
+/*0000000header000000*/
+
+
+
+.right{
+    float: right;
+}
+.contact-content{
+    text-align: center;
+}
+
+input[type='password'],
+input[type='email']{
+    color: #444;
+    background-color: #fff;
+    padding: 15px 10px;
+    border-radius: 4px;
+    border: #858585;
+    width: 25%;
+}
